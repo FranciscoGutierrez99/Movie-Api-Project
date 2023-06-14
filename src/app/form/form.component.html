@@ -1,0 +1,40 @@
+<div class="  mx-auto w-full ">
+  <h1 class="mb-10 text-3xl font-extrabold leading-none tracking-tight text-green-400 md:text-5xl lg:text-6xl dark:text-white text-center">Look for a movie</h1>
+  <form (ngSubmit)="onSubmit()" #form="ngForm" class="bg-gray-700 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-4/5 mx-auto" >
+    <div class="mb-4">
+      <label class="block text-green-400 text-xl font-bold mb-2" for="Title">
+        Title
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Title" type="text" placeholder="Title" name="title" ngModel>
+    </div>
+    <div class="mb-6">
+      <label class="block text-green-400 text-xl font-bold mb-2" for="Year">
+        Year
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" name="year"
+      ngModel placeholder="1999">
+    </div>
+    <div class="mb-6">
+      <label class="block tracking-wide text-green-400 text-xl font-bold mb-2" for="options">
+        Options
+      </label>
+      <div class="relative">
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="options" [ngModel]="'movie'" name="options">
+          <option value="movie">Movie</option>
+          <option value="series">Series</option> 
+          <option value="episode">Episode</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center justify-between">
+      <button class="bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+        Search
+      </button>
+    </div>
+  </form>
+</div>
+
+

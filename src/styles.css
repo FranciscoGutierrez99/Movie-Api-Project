@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(159deg,#2d2d3a,#2b2b35);
+  font-family: 'Montserrat', sans-serif;
+}
